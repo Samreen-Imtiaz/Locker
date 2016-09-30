@@ -9,26 +9,29 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
-import test.screenlocker.com.locker.R;
 
 
-public class HomeFragment extends Fragment{
+public class HomeFragment extends Fragment {
+    TextView t1, t2, t3, t4,t5;
 
     public HomeFragment() {
         // Required empty public constructor
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
-    }
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        t1=(TextView) view.findViewById(R.id.textView);
+        t2=(TextView) view.findViewById(R.id.textView1);
+        t3=(TextView) view.findViewById(R.id.textView2);
+        t4=(TextView) view.findViewById(R.id.textView3);
+        t5=(TextView) view.findViewById(R.id.textView4);
+
+        return view;
+
+ }
 
 }
