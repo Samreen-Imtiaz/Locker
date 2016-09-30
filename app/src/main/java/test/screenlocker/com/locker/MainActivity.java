@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
     private int[] tabIcons = {
             R.drawable.ic_action_home,
-            R.drawable.ic_action_lock,
             R.drawable.ic_action_user,
+            R.drawable.ic_action_lock,
             R.drawable.ic_action_image
     };
 
