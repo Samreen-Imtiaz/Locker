@@ -39,9 +39,17 @@ public class WelcomeActivity extends AppCompatActivity {
 
         // Checking for first time launch - before calling setContentView()
         prefManager = new PrefManager(this);
-        if (!prefManager.isFirstTimeLaunch()) {
-            launchHomeScreen();
-            finish();
+        Bundle extras=getIntent().getExtras();
+        boolean openMain=false;
+        if(extras!=null){
+            openMain=extras.getBoolean("open");
+
+        }
+        if(!openMain) {
+            if (!prefManager.isFirstTimeLaunch()) {
+                launchHomeScreen();
+                finish();
+            }
         }
 
         // Making notification bar transparent
@@ -50,7 +58,7 @@ public class WelcomeActivity extends AppCompatActivity {
         }
 
         setContentView(R.layout.activity_welcome);
-
+        getSupportActionBar().hide();
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
         btnSkip = (Button) findViewById(R.id.btn_skip);
@@ -123,7 +131,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
+        startActivity(new Intent(WelcomeActivity.this, SlideMenuActivity.class));
         finish();
     }
 

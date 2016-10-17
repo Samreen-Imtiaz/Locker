@@ -7,9 +7,7 @@ package test.screenlocker.com.locker;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-/**
- * Created by Lincoln on 05/05/16.
- */
+
 public class PrefManager {
     SharedPreferences pref;
     SharedPreferences.Editor editor;

@@ -13,22 +13,19 @@ import android.view.ViewGroup;
 import test.screenlocker.com.locker.R;
 
 
-public class SecurityFragment extends Fragment{
+public class SecurityFragment extends Fragment {
 
     public SecurityFragment() {
         // Required empty public constructor
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_security, container, false);
+        View view = inflater.inflate(R.layout.fragment_security, container, false);
+
+        return view;
     }
 
 }
